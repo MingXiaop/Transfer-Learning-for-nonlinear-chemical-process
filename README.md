@@ -14,13 +14,12 @@
 
 - Where,
 
-   - 𝐶_𝐴: Concentration of reactant A (kmol/m3)
+    - 𝐶<sub>𝐴</sub>: Concentration of reactant A (kmol/m<sup>3</sup>)
    - 𝑇: Temperature of the reactor (K)
-   - 𝐶_𝐴0: Concentration of reactant A in the feed
+   - 𝐶<sub>𝐴0</sub>: Concentration of reactant A in the feed
    - 𝑄 :  Heat input rate (kJ/h)
-   - F: feed volumetric flow rate (m3/h)
-   - 𝑇0: Inlet temperature (K)
-
+   - F: feed volumetric flow rate (m<sup>3</sup>/h)
+   - 𝑇<sub>0</sub>: Inlet temperature (K)
 
 - The State and Manipulated variable for this system is:
 
