@@ -29,62 +29,11 @@
 
 
 > The full description of the process parameters can be found at [here](https://link.springer.com/book/10.1007/978-3-030-71183-2)
-- The State and Manipulated variables for this system are:
 
-    - States variables: _𝐱_=[𝐶<sub>A</sub>−𝐶<sub>As</sub>, 𝑇−𝑇<sub>s</sub>]
-    - Control / Manipulated variables: _𝐮_=[𝐶<sub>A0</sub>−𝐶<sub>A0s</sub>, 𝑄−𝑄<sub>s</sub>]
+## 2.Development of transfer learning RNN model
 
-## 2. Plug Flow Reactor (PFR) Example
-
-- Let us consider a first-order, exothermic, irreversible reaction from A to B
-
-
-<img src="https://github.com/Keerthana-Vellayappan/Demonstration-of-Physics-Informed-Machine-Learning-Model/assets/160836399/fdbbc632-3288-45b9-81be-034ecb42bf4a" alt = " Figure: Schematic diagram of a PFR" width="500" height="200">
-
-- The First Principle equation for this system is as follows:
-
-
-    <img src="https://github.com/Keerthana-Vellayappan/Demonstration-of-Physics-Informed-Machine-Learning-Model/assets/160836399/e34d27cd-885b-4950-b6e9-37a38b8d0254" width="320" height="100">
-
-- Where,
-
-   - 𝐶_𝐴: Concentration of reactant A (kmol/m3)
-   - 𝑇: Temperature of the reactor (K)
-   - U :  Overall heat transfer coefficient (kcal /m2 min K)
-   - u: superficial velocity (m/min)
-   - 𝑇_𝑐: Cooling liquid temperature (K)
-
-
-- The State and Manipulated variable for this system is:
-
-     - States variables: 𝐱=[𝐶𝐴, 𝑇]
-     - Control / Manipulated variables: 𝐮=[𝑇_𝑐−𝑇_𝑐_𝑠]
-
-
-- The generated dataset with the input and output will look like:
-
-![image](https://github.com/Keerthana-Vellayappan/Demonstration-of-Physics-Informed-Machine-Learning-Model/assets/160836399/2e739dd2-a2e0-4cfb-a841-983dd760df9a)
-
-- The above data is for a dataset with n samples with 6 internal time-steps for each sample with the Plug Flow Reactor length discretized into 10 points.
-
-- The code for demonstrating PIRNN model for a PFR is available [here](https://github.com/Keerthana-Vellayappan/Demonstration-of-Physics-Informed-Machine-Learning-Model/blob/main/PFR%20PI-RNN%20Example.ipynb)
-
-## 3. Principle for Physics-Informed Loss
-
-<p align="center">
-
-<img src="https://github.com/Keerthana-Vellayappan/Demonstration-of-Physics-Informed-Machine-Learning-Model/assets/160836399/4f5b19db-09df-4547-9872-a58f16aa458f" alt = " Figure: Schematic diagram of PIRNN model" width="600" height="300">
-
-</p>
-
-- The ODE is explicitly embedded in the loss function and is calculated based on the RNN predicted states, where the derivative (LHS) is approximated using the finite difference method.
-- The RHS of the ODE is computed by substituting the PIRNN predicted states and the manipulated inputs into the first principle equation.
-- The physics informed loss is the error between the LHS and RHS of the ODE using the PIRNN predicted results and is incorporated during model training. 
-
-## 4. Recurrent Neural Network (RNN) Structure
-
-- RNN are a class of neural networks that is powerful for modeling sequence data such as time series data.
-- It can handle sequential data and account for past information in the current prediction.
+- Select the source process with a similar configuration as the target process, and collect sufficient data from the source process
+   > Please refer to the "source model." file
 
 - The RNN model input and output are as follows:
     - Input: System initial state variable 𝐱_𝟎(𝑡_𝑘), and control variables 𝐮(𝑡_𝑘).
