@@ -40,9 +40,23 @@
   > Adapter-tuning: adapt pre-trained model to the target domain via adaptation layer and fine-tuning
   > Fine-tuning: fine tuning pre-trained model with target data directly
   
+## 3. Simulation results
 
+\begin{table}[!htb]
+\caption{Testing errors of standard and TL-RNNs}
+\centering
+\label{table2}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+                 & Data Set Size   & Training Time (s)   & Testing Error         \\ \hline
+TL-RNN  & 24,000          & 153.24           & $3.144\times10^{-5}$      \\ \hline
+Standard RNN    & 24,000          & 187.80          & $2.635\times10^{-5}$       \\ \hline
+TL-RNN  & 3,200           & 43.91           & $2.141\times10^{-4}$        \\ \hline
+Standard RNN    & 3,200           & 48.70            & $4.090\times10^{-4}$         \\ \hline
+\end{tabular}
+\end{table}
 
-## 5. Libraries and Tools used
+## 4. Libraries and Tools used
 
 [Tensorflow](https://www.tensorflow.org/): Deep learning framework used for building and training neural networks.
 
@@ -53,7 +67,7 @@
 [scikit-learn](https://scikit-learn.org/): Machine learning library for Python used for data analysis and modeling.
 
 
-## 6. Citation
+## 5. Citation
 
 The demonstration of these examples are adapted from the following literature work:
 
