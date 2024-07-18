@@ -41,20 +41,8 @@
   > Fine-tuning: fine tuning pre-trained model with target data directly
   
 ## 3. Simulation results
+![Testing error](https://github.com/user-attachments/assets/c8a68240-0dcb-4faf-a64c-101782c1224b)
 
-\begin{table}[!htb]
-\caption{Testing errors of standard and TL-RNNs}
-\centering
-\label{table2}
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-                 & Data Set Size   & Training Time (s)   & Testing Error         \\ \hline
-TL-RNN  & 24,000          & 153.24           & $3.144\times10^{-5}$      \\ \hline
-Standard RNN    & 24,000          & 187.80          & $2.635\times10^{-5}$       \\ \hline
-TL-RNN  & 3,200           & 43.91           & $2.141\times10^{-4}$        \\ \hline
-Standard RNN    & 3,200           & 48.70            & $4.090\times10^{-4}$         \\ \hline
-\end{tabular}
-\end{table}
 
 ## 4. Libraries and Tools used
 
