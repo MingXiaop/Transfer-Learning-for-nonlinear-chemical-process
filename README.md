@@ -44,7 +44,7 @@
 
 ## 5. Libraries and Tools used
 
-[PyTorch](https://pytorch.org/): Deep learning framework used for building and training neural networks.
+[Tensorflow](https://www.tensorflow.org/): Deep learning framework used for building and training neural networks.
 
 [Matplotlib](https://matplotlib.org/): Python plotting library for creating visualizations.
 
