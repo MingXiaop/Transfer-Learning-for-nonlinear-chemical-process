@@ -28,13 +28,11 @@
     - Control / Manipulated variables: 𝐮=[𝐶_𝐴0−𝐶_𝐴0𝑠, 𝑄 −𝑄_𝑠 ]
 
 
-- The generated dataset with the input and output will look like:
+> The full description of the process parameters can be found at [here](https://link.springer.com/book/10.1007/978-3-030-71183-2)
+- The State and Manipulated variables for this system are:
 
-![image](https://github.com/Keerthana-Vellayappan/Demonstration-of-Physics-Informed-Machine-Learning-Model/assets/160836399/f41bd653-cb8d-43de-950e-71946ddc79d8)
-
-- The above data sample is for a dataset with n samples with 6 internal time-steps for each sample.
-
-- The code for demonstrating the PIRNN model for the CSTR is available [here](https://github.com/Keerthana-Vellayappan/Demonstration-of-Physics-Informed-Machine-Learning-Model/blob/main/CSTR%20PI-RNN%20Example.ipynb)
+    - States variables: _𝐱_=[𝐶<sub>A</sub>−𝐶<sub>As</sub>, 𝑇−𝑇<sub>s</sub>]
+    - Control / Manipulated variables: _𝐮_=[𝐶<sub>A0</sub>−𝐶<sub>A0s</sub>, 𝑄−𝑄<sub>s</sub>]
 
 ## 2. Plug Flow Reactor (PFR) Example
 
