@@ -33,14 +33,13 @@
 ## 2.Development of transfer learning RNN model
 
 - Select the source process with a similar configuration as the target process, and collect sufficient data from the source process
-   > Please refer to the "source model." file
-
-- The RNN model input and output are as follows:
-    - Input: System initial state variable 𝐱_𝟎(𝑡_𝑘), and control variables 𝐮(𝑡_𝑘).
-    - Output: Future state dynamics 𝐱(𝑡_𝑘+Δ) are predicted for one sampling period ∆.
-<p align="center">
-<img src="https://github.com/Keerthana-Vellayappan/Demonstration-of-Physics-Informed-Machine-Learning-Model/assets/160836399/332a1da6-9b89-4e04-a6b3-1b5c90185319" width="600" height="250">
-</p>
+   > Please refer to the "source_model.pyipynb" file
+- Collect data from the target process, and adapt the pre-trained model to the target domain
+   > Please refer to the "target_model_sufficient.pyipynb" and "target_model_insufficient.pyipynb" file
+- Adaptation can be achieved via adapter-tuning or fine-tuning method
+  > Adapter-tuning: adapt pre-trained model to the target domain via adaptation layer and fine-tuning
+  > Fine-tuning: fine tuning pre-trained model with target data directly
+  
 
 
 ## 5. Libraries and Tools used
@@ -53,14 +52,12 @@
 
 [scikit-learn](https://scikit-learn.org/): Machine learning library for Python used for data analysis and modeling.
 
-[similaritymeasures](https://github.com/similaritymeasures/similaritymeasures): Python library for computing similarity measures between curves or time series data.
-
 
 ## 6. Citation
 
 The demonstration of these examples are adapted from the following literature work:
 
-Zheng, Yingzhe, Cheng Hu, Xiaonan Wang, and Zhe Wu. "Physics-informed recurrent neural network modeling for predictive control of nonlinear processes." Journal of Process Control 128 (2023): 103005.
+Xiao, M., C. Hu, and Z. Wu, “Modeling and Predictive Control of Nonlinear Processes Using Transfer Learning Method“, AIChE J., 69, e18076, 2023.
 
-Additionally, you can find our paper [here](https://www.sciencedirect.com/science/article/pii/S0959152423000847)
+Additionally, you can find our paper [here](https://aiche.onlinelibrary.wiley.com/doi/full/10.1002/aic.18076)
 
