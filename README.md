@@ -33,9 +33,9 @@
 ## 2.Development of transfer learning RNN model
 
 - Select the source process with a similar configuration as the target process, and collect sufficient data from the source process
-   > Please refer to the "source_model.pyipynb" file
+   > Please refer to the "source_model.ipynb" file
 - Collect data from the target process, and adapt the pre-trained model to the target domain
-   > Please refer to the "target_model_sufficient.pyipynb" and "target_model_insufficient.pyipynb" file
+   > Please refer to the "target_model_sufficient.ipynb" and "target_model_insufficient.ipynb" file
 - Adaptation can be achieved via adapter-tuning or fine-tuning method
   > Adapter-tuning: adapt pre-trained model to the target domain via adaptation layer and fine-tuning
   > Fine-tuning: fine tuning pre-trained model with target data directly
